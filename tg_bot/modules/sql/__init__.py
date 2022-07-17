@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 
 from tg_bot import DB_URI, KInit, log
 
-client_encoding="utf8"
+client_encoding="PostgreSQL-83028"
 echo=KInit.DEBUG
 
 def start() -> scoped_session:
