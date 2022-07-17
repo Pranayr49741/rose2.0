@@ -8,7 +8,7 @@ client_encoding="utf8"
 echo=KInit.DEBUG
 
 def start() -> scoped_session:
-    engine = create_engine('postgresql://%s:%s@%s/%s' % (DB_URI, client_encoding, echo))
+    engine = create_engine('postgresql://%s@%s/%s' % (DB_URI, client_encoding, echo))
     log.info("[PostgreSQL] Connecting to database......")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
