@@ -6,7 +6,7 @@ from tg_bot import DB_URI, KInit, log
 
 
 def start() -> scoped_session:
-    engine = create_engine(DB_URI, client_encoding="utf8", echo=KInit.DEBUG)
+    engine = create_engine('postgresql://%s:%s@%s:%s/%s' % (DB_URI, client_encoding="utf8", echo=KInit.DEBUG))
     log.info("[PostgreSQL] Connecting to database......")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
