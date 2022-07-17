@@ -103,7 +103,7 @@ class KigyoINIT:
 
 KInit = KigyoINIT(parser=kigconfig)
 
-SYS_ADMIN = KInit.SYS_ADMIN
+#SYS_ADMIN = KInit.SYS_ADMIN
 OWNER_ID = KInit.OWNER_ID
 OWNER_USERNAME = KInit.OWNER_USERNAME
 APP_ID = KInit.APP_ID
